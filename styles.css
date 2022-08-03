@@ -1,0 +1,7 @@
+body {
+    background-image: url("blur_bg.jpg");
+    height: 150vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
