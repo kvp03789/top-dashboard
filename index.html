@@ -47,7 +47,7 @@
                 <div class="card-text">
                     <span id="news-header">Community News</span>
                     <h3>Omni Online patch 2.7.1 arrives October 3.</h3>
-                    <p>Explore two new planets of the Narisyn system when patch 2.7.1 arrives.
+                    <p>Explore two new planets in the Arisyn system when patch 2.7.1 arrives.
                     Embark on new journeys across uncharted space in 3 new deep space
                     exploration ships, adventure with friends through 50+ new missions,
                     and establish your guild's presence in the galaxy with new guild
@@ -110,10 +110,23 @@
 
             <div class="user-friend-item">
                 <img src="images/user_logo_small_resize.png" alt="" class="player-icon">
-                <span class="user-name-container">Tellurian</span>
+                <div class="small-container">
+                    <span class="user-name-container">Tellurian</span>
+                    <span>Online<img src="images/down.svg" alt="" id="small-down"></span>
+                </div>
+                <span><img src="images/share-outline.svg" alt="" id="pop-out"></span>
             </div>
 
-            <div class="friend-container">
+            <div class="show-friend-button">
+                <img src="images/right.svg" alt="" id="right-svg">
+                <img src="images/down.svg" alt="" id="right-svg">
+                <img src="images/people-outline.svg" alt="" id="friend-svg">
+                <span id="show-hide-friends">
+                    Friends - 6/33
+                </span>
+            </div>
+
+            <div class="friend-container hidden">
         
                 <div class="friend-item">
                     <img src="images/friends_list_item.png" alt="" class="friend-icon">
@@ -153,6 +166,6 @@
         </div>
 
     </div>
-    
+    <script src="scripts.js"></script>
 </body>
 </html>

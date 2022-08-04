@@ -32,7 +32,7 @@ h1 {
     justify-content: center;
     display: grid;
     gap: 25px;
-    grid-template-columns: 250px minmax(400px, 1fr) 300px;
+    grid-template-columns: 250px minmax(500px, 1fr) 300px;
     /* grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)); */
     grid-template-rows: 40px 100px 1fr;
     grid-template-areas: 
@@ -74,6 +74,7 @@ article {
      max-height: 800px;
     overflow-y: auto; 
     overflow-x:hidden;
+    box-shadow: 20px rgba(198, 234, 243, 0.889);
 }
 
 /* article > div {
@@ -97,9 +98,10 @@ border: 2px yellow dotted;
 .card-container:hover {
     background-color: rgba(127, 127, 127, 0.281);
     cursor: pointer;
+
 }
 
-.card-text:hover {
+.card-text:hover, .card-container:hover .card-text {
     margin-bottom: 22px;
     transition: margin-bottom 200ms;
     transition-timing-function: ease-in;
@@ -160,39 +162,40 @@ border: 2px yellow dotted;
     background-color: rgb(40, 40, 35);
     color: white;
     grid-area: friends;
-    /* display: flex;
+    padding-right: 25px;
+    padding-left: 25px;
+    display: flex;
     flex-direction: column;
-    align-items:flex-start ;
-    justify-content: center;
-    gap: 5px; */
+    justify-content: flex-start;
+    gap: 20px;
 }
 
-#friends-list > div {
+/* #friends-list > div {
+    border: 2px red dotted;
+} */
 
+.hidden {
+    visibility: hidden;
 }
 
 .friend-container {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    align-items: center;
     gap: 20px;
-
-    
 }
 
 .friend-container > div {
     flex: 1 1 100%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 40px;
-    text-align: left;
+    /* text-align: left; */
 }
+
 
 /* #friends-list > div {
     flex: 1;
@@ -208,6 +211,14 @@ border: 2px yellow dotted;
 
 .friend-name {
     color: rgba(116, 190, 243, 0.889);
+}
+
+.friend-item {
+    width: 80%;
+}
+
+.friend-item:hover {
+    background-color: rgb(94, 90, 90);
 }
 
 .user-name-container {
@@ -233,9 +244,25 @@ footer {
 #omni-logo {
     width: 275px;
     height: auto;
-    /* max-width: 80%;
-    max-height: auto; */
-  
+}
+
+#friend-svg {
+    width: 25px;
+    height: auto;
+    margin-left: 10px;
+    margin-top: 5px;
+    filter: invert(98%) sepia(8%) saturate(1144%) hue-rotate(305deg) brightness(109%) contrast(101%) opacity(75%);
+}
+
+#right-svg, #down-svg {
+    width: 25px;
+    height: auto;
+    filter: invert(98%) sepia(8%) saturate(1144%) hue-rotate(305deg) brightness(109%) contrast(101%) opacity(75%);
+    margin-top: 5px;
+}
+
+#down-svg {
+    visibility: hidden;
 }
 
 .logo-link {
@@ -271,9 +298,53 @@ footer {
 }
 
 .friend-icon {
-    margin: 0;
+    margin-right: 25px;
     border-radius: 50%;
     width: 48px;
     height: auto;
 }
 
+#show-hide-friends {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+.show-friend-button {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show-friend-button:hover {
+    background-color: rgb(94, 90, 90);
+}
+
+#small-down {
+    width: 15px;
+    height: auto;
+    margin-left: 5px;
+    filter: invert(98%) sepia(8%) saturate(1144%) hue-rotate(305deg) brightness(109%) contrast(101%) opacity(75%);
+}
+
+#pop-out {
+    width: 22px;
+    height: auto;
+    filter: invert(98%) sepia(8%) saturate(1144%) hue-rotate(305deg) brightness(109%) contrast(101%) opacity(75%);
+}
+
+.user-friend-item > *:hover{
+    background-color: rgb(94, 90, 90);
+    cursor: pointer;
+}
+
+.user-friend-item > div, .user-friend-item > span {
+    min-height: 30px;
+}
